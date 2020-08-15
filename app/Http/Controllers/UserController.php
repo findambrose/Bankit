@@ -14,8 +14,9 @@ class UserController extends Controller
 
    function assign(){
      $user = new User();
-    $loggedInUserId = auth()->user()->id;
-     $userInstance = $user->findOrFail($loggedInUserId);
+    // $loggedInUserId = auth()->user()->id;
+     $userInstance = auth()->user();
+    // $userInstance = $user->findOrFail($loggedInUserId);
      $userInstance->group_id =  request('group_id');
      $userInstance->save();
      $group = Group::findOrFail(request('group_id'));
@@ -24,7 +25,7 @@ class UserController extends Controller
 
 
 
-     return redirect('/home')->with('success', 'Success. Group joined.');
+     return redirect(route('groupDets'))->with('success', 'Success. Group joined.');
    }
 
    function change(){
