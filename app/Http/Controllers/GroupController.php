@@ -27,6 +27,12 @@ class GroupController extends Controller
   return view('changegroup', ['groups' => $groups]);
  }
 
+ function groupDets()
+ {
+   //Code to get group info
+   return view('group_dets');
+ }
+
 
    function store(){
      $groupInstance = new Group();
@@ -34,6 +40,6 @@ class GroupController extends Controller
      $groupInstance->desc =  request('desc');
      $groupInstance->save();
 
-     return redirect('/home')->with('success', 'Group succesfully created. Reload to clear message');
+     return redirect('/')->with('success', 'Group succesfully created. Reload to clear message');
    }
 }
