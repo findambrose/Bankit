@@ -24,16 +24,30 @@
                       </div>
 
                       <div class="form-group row">
+                          <label for="desc" class="col-md-4 col-form-label text-md-right">{{ __('Loan Purpose') }}</label>
+
+                          <div class="col-md-6">
+                              <input id="desc" type="text" class="form-control @error('email') is-invalid @enderror" name="desc" value="{{ old('desc') }}" required autocomplete="desc" autofocus>
+
+                              @error('desc')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                              @enderror
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
                           <label for="period" class="col-md-4 col-form-label text-md-right">{{ __('Select Loan Period') }}</label>
 
                           <div class="col-md-6">
                               <select class="" name="period">
-                                <option value="7days">7 Days</option>
-                                <option value="14days">14 Days</option>
-                                <option value="21days">21 Days</option>
-                                <option value="1month">1 Month</option>
-                                <option value="2month">2 Months</option>
-                                <option value="3month">3 Month</option>
+                                <option value=1>7 Days</option>
+                                <option value=2>14 Days</option>
+                                <option value=3>21 Days</option>
+                                <option value=4>1 Month</option>
+                                <option value=8>2 Months</option>
+                                <option value=12>3 Month</option>
 
                               </select>
 

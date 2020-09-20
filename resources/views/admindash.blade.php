@@ -17,6 +17,8 @@
                     <button class="btn btn-primary" style="margin-right: 20px" type="button" onclick="window.location='{{route('createGroup')}}'" name="button">Create New Group(s)</button>
 
                     <button class="btn btn-primary" style="margin-right: 20px" type="button" onclick="window.location='{{route('joinGroup')}}'" name="button">Join a Group</button>
+                    <button class="btn btn-primary" style="margin-right: 20px" type="button" onclick="window.location='{{route('loanRequests')}}'" name="button">Loan Requests</button>
+                    <button class="btn btn-primary" style="margin-right: 20px" type="button" onclick="window.location='{{route('messages')}}'" name="button">View Messages</button>
                     <button class="btn btn-primary" type="button" onclick="window.location='{{route('changeGroup')}}'" name="button">Change Group</button>
 
                     <div class="success">

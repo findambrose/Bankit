@@ -13,19 +13,25 @@
                         </div>
                     @endif
 
+                    <div class="account_info">
+                      <p>Total Savings: 600</p>
+                      <p>Total Loans: 500</p>
+                    </div>
+
                     <div class="group-members">
                       <h3 style="margin-bottom: 15px">Group Members</h3>
                     <ul>
                       @foreach($groupMembers as $groupMember)
                         <li>{{$groupMember->name}}</li>
                       @endforeach
-                      <li></li>
+
                     </ul>
                     </div>
 
 
                     <button class="btn btn-primary" style="margin-right: 20px" type="button" onclick="window.location='{{route('joinGroup')}}'" name="button">Join a Group</button>
                     <button class="btn btn-primary" type="button" onclick="window.location='{{route('changeGroup')}}'" name="button">Change Group</button>
+                    <button class="btn btn-primary" style="margin-left: 20px" type="button" onclick="window.location='{{route('groupDets')}}'" name="button">Manage Group</button>
 
                     <div class="success">
                       <p  style="margin-top: 20px">
